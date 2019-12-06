@@ -30,6 +30,7 @@ class Squirrel(models.Model):
     
     date = models.DateField(
         help_text=_('Date'),
+        default='2000-01-01',
     )
     
     ADULT = 'Adult'
@@ -86,6 +87,7 @@ class Squirrel(models.Model):
     specific_location = models.CharField(
         help_text=_('Specific Location'),
         max_length=100,
+        default='None',
     )
     
     running = models.BooleanField(
@@ -116,6 +118,7 @@ class Squirrel(models.Model):
     other_activities = models.CharField(
         help_text = _('Other Activities'),
         max_length=100,
+        default='None'
     )
     
     kuks = models.BooleanField(
